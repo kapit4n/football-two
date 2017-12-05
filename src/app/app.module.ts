@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { CdkTableModule } from '@angular/cdk/table';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import {
@@ -20,7 +20,6 @@ import {
 	MatGridListModule,
 	MatIconModule,
 	MatInputModule,
-	MatListModule,
 	MatMenuModule,
 	MatNativeDateModule,
 	MatPaginatorModule,
@@ -35,6 +34,7 @@ import {
 	MatSnackBarModule,
 	MatSortModule,
 	MatTableModule,
+	MatListModule,
 	MatTabsModule,
 	MatToolbarModule,
 	MatTooltipModule,
@@ -61,9 +61,27 @@ import { FixtureListComponent } from './fixture/fixture-list/fixture-list.compon
 import { FixtureEditComponent } from './fixture/fixture-edit/fixture-edit.component';
 import { FixtureInfoComponent } from './fixture/fixture-info/fixture-info.component';
 
+export class AllMaterialModule { }
+
+const appRoutes: Routes = [
+	{ path: 'info', component: ChampionshipInfoComponent },
+	{ path: '**', component: ChampionshipInfoComponent }
+];
+
 
 @NgModule({
-	exports: [
+	declarations: [
+		AppComponent, ChampionshipListComponent, ChampionshipInfoComponent, ChampionshipEditComponent, ChampionshipNewComponent, TeamNewComponent, TeamInfoComponent, TeamEditComponent, TeamListComponent, PlayerListComponent, PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, FixtureListComponent, FixtureEditComponent, FixtureInfoComponent
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		FormsModule,
+		RouterModule.forRoot(
+			appRoutes,
+			{ enableTracing: true } // <-- debugging purposes only
+		),
+		ReactiveFormsModule,
 		CdkTableModule,
 		MatAutocompleteModule,
 		MatButtonModule,
@@ -96,29 +114,6 @@ import { FixtureInfoComponent } from './fixture/fixture-info/fixture-info.compon
 		MatTabsModule,
 		MatToolbarModule,
 		MatTooltipModule,
-	],
-	declarations: [ChampionshipListComponent, ChampionshipInfoComponent, ChampionshipEditComponent, ChampionshipNewComponent, TeamNewComponent, TeamInfoComponent, TeamEditComponent, TeamListComponent, PlayerListComponent, PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, FixtureListComponent, FixtureEditComponent, FixtureInfoComponent]
-})
-export class AllMaterialModule { }
-
-const appRoutes: Routes = [
-	{ path: 'crisis-center', component: ChampionshipListComponent },
-	{ path: '**', component: ChampionshipListComponent }
-];
-
-
-@NgModule({
-	declarations: [
-		AppComponent
-	],
-	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		AllMaterialModule, FormsModule,
-		RouterModule.forRoot(
-			appRoutes,
-			{ enableTracing: true } // <-- debugging purposes only
-		)
 	],
 	providers: [],
 	bootstrap: [AppComponent]

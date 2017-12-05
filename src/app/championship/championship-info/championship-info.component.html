@@ -1,3 +1,12 @@
-<p>
-  championship-info works!
-</p>
+<div>
+  <mat-list>
+    <mat-list-item *ngFor="let match of matches">
+      <mat-icon matListIcon>info</mat-icon>
+      <h3 matLine> {{match}} </h3>
+      <p matLine>
+        <span> {{match}} </span>
+        <span class="demo-2"> -- {{match}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>
