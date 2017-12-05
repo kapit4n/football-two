@@ -9,5 +9,5 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 export class AppComponent {
   title = 'app';
   events = [];
-  opened: string;
+  opened: boolean;
 }
