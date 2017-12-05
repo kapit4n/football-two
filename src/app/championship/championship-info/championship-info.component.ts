@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChampionshipService } from '../../services/championship.service'
 
 @Component({
 	selector: 'app-championship-info',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./championship-info.component.css']
 })
 export class ChampionshipInfoComponent implements OnInit {
-	matches = ["Barcelona vs Madrid", "Atletico vs Celta"];
-	constructor() { }
+	matches: any[];
+	constructor(private championshipService: ChampionshipService) {
+	}
 
 	ngOnInit() {
+		this.getChampionships();
+	}
+
+	getChampionships(): void {
+		this.championshipService.getChampionships()
+			.subscribe(matches => this.matches = matches);
 	}
 
 }
