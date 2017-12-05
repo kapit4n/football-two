@@ -7,17 +7,17 @@ import { ChampionshipService } from '../../services/championship.service'
 	styleUrls: ['./championship-info.component.css']
 })
 export class ChampionshipInfoComponent implements OnInit {
-	matches: any[];
+	championship: any;
+
 	constructor(private championshipService: ChampionshipService) {
 	}
 
 	ngOnInit() {
-		this.getChampionships();
+		this.getChampionship();
 	}
 
-	getChampionships(): void {
-		this.championshipService.getChampionships()
-			.subscribe(matches => this.matches = matches);
+	getChampionship(): void {
+		this.championshipService.getChampionshipById(1)
+			.subscribe(championship => this.championship = championship);
 	}
-
 }

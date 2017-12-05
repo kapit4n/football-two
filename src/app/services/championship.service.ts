@@ -6,6 +6,7 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class ChampionshipService {
 	mock: MockChampionship;
+	
 	championships: any[] = [{ local: "Barcelona", visit: "Madrid", localGoal: 0, visitGoal: 0, matchDate: new Date() },
 	{ local: "Valencia", visit: "Atletic", localGoal: 0, visitGoal: 0, matchDate: new Date() }];
 	constructor() {
@@ -18,5 +19,9 @@ export class ChampionshipService {
 
 	getChampionships(): Observable<any[]> {
 		return of(this.championships);
+	}
+
+	getChampionshipById(id: any): Observable<any> {
+		return of(this.championships[0]);
 	}
 }
