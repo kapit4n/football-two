@@ -1,9 +1,25 @@
 <div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{championship.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{championship.img}}" alt="Alt" style=" height: 300px; width: 800px; overflow: hidden;">
+    <mat-card-content>
+      <p>
+        {{championship.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
   <mat-list>
     <mat-list-item *ngFor="let match of championship.matches">
       <mat-icon matListIcon>info</mat-icon>
       <h3 matLine> <span> {{match.local}} {{match.localGoal}}</span> 
-      	<br> <span> {{match.visit}} {{match.localGoal}}</span> </h3>
+        <br> <span> {{match.visit}} {{match.localGoal}}</span> </h3>
       <p matLine>
         <span class="demo-2">{{match.matchDate}} </span>
       </p>

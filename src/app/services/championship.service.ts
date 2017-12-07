@@ -6,9 +6,17 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class ChampionshipService {
 	mock: MockChampionship;
-	
-	championships: any[] = [{ local: "Barcelona", visit: "Madrid", localGoal: 0, visitGoal: 0, matchDate: new Date() },
+
+	matches: any[] = [{ local: "Barcelona", visit: "Madrid", localGoal: 0, visitGoal: 0, matchDate: new Date() },
 	{ local: "Valencia", visit: "Atletic", localGoal: 0, visitGoal: 0, matchDate: new Date() }];
+
+	championships: any[] = [{
+		name: "champions league",
+		description: "Championship description",
+		img: "https://cdn.reviewsdir.com/wp-content/uploads/2016/06/UEFA-Champions-league-2016-17.jpg",
+		matches: this.matches
+	}];
+
 	constructor() {
 		this.mock = new MockChampionship();
 	}
