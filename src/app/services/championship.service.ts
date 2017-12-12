@@ -7,13 +7,15 @@ import { of } from 'rxjs/observable/of';
 export class ChampionshipService {
 	mock: MockChampionship;
 
-	matches: any[] = [{ local: "Barcelona", visit: "Madrid", localGoal: 0, visitGoal: 0, matchDate: new Date() },
-	{ local: "Valencia", visit: "Atletic", localGoal: 0, visitGoal: 0, matchDate: new Date() }];
+	matches: any[] = [
+		{ local: "Barcelona", visit: "Madrid", localGoal: 0, visitGoal: 0, matchDate: new Date() },
+		{ local: "Valencia", visit: "Atletic", localGoal: 0, visitGoal: 0, matchDate: new Date() }
+	];
 
 	championships: any[] = [{
 		name: "champions league",
 		description: "Championship description",
-		img: "https://cdn.reviewsdir.com/wp-content/uploads/2016/06/UEFA-Champions-league-2016-17.jpg",
+		img: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
 		matches: this.matches
 	}];
 
