@@ -4,7 +4,9 @@
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{championship.name}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{championship.img}}" alt="Alt" style=" height: 300px; width: 800px; overflow: hidden;">
+    <div style=" height: 400px; overflow: hidden;">
+      <img mat-card-image src="{{championship.img}}" class="" alt="Alt">
+    </div>
     <mat-card-content>
       <p>
         {{championship.description}}
@@ -21,7 +23,7 @@
       <h3 matLine> <span> {{match.local}} {{match.localGoal}}</span> 
         <br> <span> {{match.visit}} {{match.localGoal}}</span> </h3>
       <p matLine>
-        <span class="demo-2">{{match.matchDate}} </span>
+        <span class="demo-2">{{match.matchDate | date: 'dd/MM/yyyy'}} </span>
       </p>
     </mat-list-item>
   </mat-list>
