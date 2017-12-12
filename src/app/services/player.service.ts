@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class PlayerService {
@@ -18,5 +20,10 @@ export class PlayerService {
 	playersByChampionship(championship: any): any[] {
 		return this.players;
 	}
+
+	getPlayers(): Observable<any[]> {
+		return of(this.players);
+	}
+
 
 }

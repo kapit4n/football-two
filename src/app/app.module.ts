@@ -61,6 +61,8 @@ import { FixtureListComponent } from './fixture/fixture-list/fixture-list.compon
 import { FixtureEditComponent } from './fixture/fixture-edit/fixture-edit.component';
 import { FixtureInfoComponent } from './fixture/fixture-info/fixture-info.component';
 import { ChampionshipService } from './services/championship.service';
+import { TeamService } from './services/team.service';
+import { PlayerService } from './services/player.service';
 
 export class AllMaterialModule { }
 
@@ -116,7 +118,7 @@ const appRoutes: Routes = [
 		MatToolbarModule,
 		MatTooltipModule,
 	],
-	providers: [ChampionshipService],
+	providers: [ChampionshipService, TeamService, PlayerService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

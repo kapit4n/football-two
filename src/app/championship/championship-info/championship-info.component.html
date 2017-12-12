@@ -20,8 +20,8 @@
   <mat-list>
     <mat-list-item *ngFor="let match of championship.matches">
       <mat-icon matListIcon>info</mat-icon>
-      <h3 matLine> <span> {{match.local}} {{match.localGoal}}</span> 
-        <br> <span> {{match.visit}} {{match.localGoal}}</span> </h3>
+      <h3 matLine> <span> {{match.local.name}} {{match.localGoal}}</span> 
+        <br> <span> {{match.visit.name}} {{match.localGoal}}</span> </h3>
       <p matLine>
         <span class="demo-2">{{match.matchDate | date: 'dd/MM/yyyy'}} </span>
       </p>
