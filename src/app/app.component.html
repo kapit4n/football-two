@@ -1,17 +1,24 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
     --- FAVORITES ---------
-    <br> ---- CHAMPIONSHIPS ----
     <mat-list>
-      <mat-list-item *ngFor="let item of championships">{{item.name}}</mat-list-item>
-    </mat-list>
-    <br> ---- TEAMS ------------
-    <mat-list>
-      <mat-list-item *ngFor="let item of teams">{{item.name}}</mat-list-item>
-    </mat-list>
-    <br> ---- PLAYERS ----------
-    <mat-list>
-      <mat-list-item *ngFor="let item of players">{{item.name}}</mat-list-item>
+      <h3 matSubheader>CHAMPIONSHIPS</h3>
+      <mat-list-item *ngFor="let item of championships">
+        <img matListAvatar src="{{item.img}}" alt="...">
+        <h4 matLine>{{item.name}}</h4>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>TEAMS</h3>
+      <mat-list-item *ngFor="let item of teams">
+        <img matListAvatar src="{{item.img}}" alt="...">
+        <h4 matLine>{{item.name}}</h4>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>PLAYERS</h3>
+      <mat-list-item *ngFor="let item of players">
+        <img matListAvatar src="{{item.img}}" alt="...">
+        <h4 matLine>{{item.name}}</h4>
+      </mat-list-item>
     </mat-list>
     <br>
   </mat-sidenav>
