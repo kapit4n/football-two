@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChampionshipService } from '../../services/championship.service'
+import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/router';
 
 @Component({
 	selector: 'app-championship-info',
@@ -8,16 +9,30 @@ import { ChampionshipService } from '../../services/championship.service'
 })
 export class ChampionshipInfoComponent implements OnInit {
 	championship: any;
+	id: number;
+	private sub: any;
 
-	constructor(private championshipService: ChampionshipService) {
+	constructor(private championshipService: ChampionshipService, private router: Router, private route: ActivatedRoute) {
+		const snapshot: RouterStateSnapshot = router.routerState.snapshot;
+		console.log(snapshot);
 	}
 
 	ngOnInit() {
-		this.getChampionship();
+		this.sub = this.route.params.subscribe(params => {
+			this.id = +params['id'];
+			if (isNaN)
+				this.getChampionship(this.id);
+			else
+				this.getChampionship(1);
+		});
 	}
 
-	getChampionship(): void {
-		this.championshipService.getChampionshipById(1)
+	getChampionship(id: any): void {
+		this.championshipService.getChampionshipById(id)
 			.subscribe(championship => this.championship = championship);
+	}
+
+	ngOnDestroy() {
+		this.sub.unsubscribe();
 	}
 }

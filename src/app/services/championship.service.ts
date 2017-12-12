@@ -15,17 +15,6 @@ export class ChampionshipService {
 	];
 
 	championships: any[] = [
-		{
-			name: "champions league",
-			description: "Championship description",
-			img: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
-			matches: this.matches
-		}, {
-			name: "La Liga",
-			description: "La liga is a championship from Spain",
-			img: "http://files.laliga.es/seccion_logos/laliga-h-16-9.jpg",
-			matches: this.matches
-		}
 	];
 
 	constructor(private teamService: TeamService) {
@@ -39,14 +28,18 @@ export class ChampionshipService {
 
 		this.championships = [
 			{
+				id:1,
 				name: "Champions league",
 				description: "Championship description",
-				img: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
+				img: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1067px-UEFA_Champions_League_logo_2.svg.png",
+				banner: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
 				matches: matchesChampionsLeague
 			}, {
+				id:2,
 				name: "La Liga",
 				description: "La liga is a championship from Spain",
 				img: "http://files.laliga.es/seccion_logos/laliga-h-16-9.jpg",
+				banner: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/898214d1435826814-collecting-trophies-fun-laligabanner_en.jpg",
 				matches: matchesLiga
 			}
 		];
@@ -61,6 +54,6 @@ export class ChampionshipService {
 	}
 
 	getChampionshipById(id: any): Observable<any> {
-		return of(this.championships[0]);
+		return of(this.championships[id - 1]);
 	}
 }

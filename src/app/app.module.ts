@@ -67,7 +67,7 @@ import { PlayerService } from './services/player.service';
 export class AllMaterialModule { }
 
 const appRoutes: Routes = [
-	{ path: 'info', component: ChampionshipInfoComponent },
+	{ path: 'championships/:id', component: ChampionshipInfoComponent },
 	{ path: '**', component: ChampionshipInfoComponent }
 ];
 
