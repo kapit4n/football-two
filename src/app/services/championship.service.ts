@@ -28,18 +28,18 @@ export class ChampionshipService {
 
 		this.championships = [
 			{
-				id:1,
+				id: 1,
 				name: "Champions league",
 				description: "Championship description",
 				img: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1067px-UEFA_Champions_League_logo_2.svg.png",
 				banner: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
 				matches: matchesChampionsLeague
 			}, {
-				id:2,
+				id: 2,
 				name: "La Liga",
 				description: "La liga is a championship from Spain",
 				img: "http://files.laliga.es/seccion_logos/laliga-h-16-9.jpg",
-				banner: "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/898214d1435826814-collecting-trophies-fun-laligabanner_en.jpg",
+				banner: "https://img.planetafobal.com/2016/07/camisetas-de-laliga-de-espana-2016-2017-ds.jpg",
 				matches: matchesLiga
 			}
 		];

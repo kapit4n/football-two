@@ -20,7 +20,7 @@ export class ChampionshipInfoComponent implements OnInit {
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
 			this.id = +params['id'];
-			if (isNaN)
+			if (this.id > 0)
 				this.getChampionship(this.id);
 			else
 				this.getChampionship(1);

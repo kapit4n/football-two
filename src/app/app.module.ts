@@ -68,6 +68,7 @@ export class AllMaterialModule { }
 
 const appRoutes: Routes = [
 	{ path: 'championships/:id', component: ChampionshipInfoComponent },
+	{ path: 'teams/:id', component: TeamInfoComponent },
 	{ path: '**', component: ChampionshipInfoComponent }
 ];
 
