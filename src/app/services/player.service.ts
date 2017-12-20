@@ -56,4 +56,3 @@ He has scored more than 600 senior career goals for club and country.
 		return of(this.players[id - 1]);
 	}
 }
-}
