@@ -5,7 +5,9 @@
     </div>
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title><h1>{{championship.name}}</h1></mat-card-title>
+      <mat-card-title>
+        <h1>{{championship.name}}</h1>
+      </mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>
@@ -18,13 +20,25 @@
     </mat-card-actions>
   </mat-card>
   <mat-list>
-    <mat-list-item *ngFor="let match of championship.matches">
-      <mat-icon matListIcon>info</mat-icon>
-      <h3 matLine> <span> {{match.local.name}} {{match.localGoal}}</span> 
-        <br> <span> {{match.visit.name}} {{match.localGoal}}</span> </h3>
-      <p matLine>
-        <span class="demo-2">{{match.matchDate | date: 'dd/MM/yyyy'}} </span>
-      </p>
+    <mat-list-item *ngFor="let match of championship.matches" style="padding-top: 50px;">
+      <div style="width: 100%;">
+        <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+          <div style="width: 100%; text-align: center;">
+            <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 45px; height: 45px;">
+          </div>
+          <div style="display: block; width: 100%; text-align: center;"> {{match.local.name}}</div>
+          <div style="display: block; text-align: center;"> {{match.localGoal}}</div>
+        </div>
+        <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
+        <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+          <div style="width: 100%; text-align: center;">
+            <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 45px; height: 45px;">
+          </div>
+          <div style="display: block; width: 100%; padding: 1px; text-align: center;"> {{match.visit.name}}</div>
+          <div style=" display: block; text-align: center;"> {{match.visitGoal}}</div>
+        </div>
+      <hr width="100%" size="2" align="center">
+      </div>
     </mat-list-item>
   </mat-list>
 </div>
