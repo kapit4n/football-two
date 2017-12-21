@@ -1,6 +1,6 @@
 <div>
   <mat-card class="example-card">
-    <div style=" height: 350px; overflow: hidden;">
+    <div style=" height: 150px; overflow: hidden;">
       <img mat-card-image src="{{championship.banner}}" class="" alt="Alt">
     </div>
     <mat-card-header>
@@ -19,26 +19,74 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-  <mat-list>
-    <mat-list-item *ngFor="let match of championship.matches" style="padding-top: 50px;">
-      <div style="width: 100%;">
-        <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-          <div style="width: 100%; text-align: center;">
-            <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 45px; height: 45px;">
+  <mat-tab-group>
+    <mat-tab label="Standings">
+      <mat-list>
+        <h3 matSubheader>Teams</h3>
+        <mat-list-item>
+          <mat-icon matListIcon><img matListAvatar src="" alt="..." style="width: 40px;"></mat-icon>
+          <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
+            Name
+          </h4>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
+            MP
+          </p>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
+            GF
+          </p>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
+            Pts
+          </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let match of championship.matches">
+          <mat-icon matListIcon><img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 40px;"></mat-icon>
+          <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{match.local.name}}</h4>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 10 </p>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 2 </p>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 3 </p>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+    <mat-tab label="Matches">
+      <mat-list>
+        <mat-list-item style="padding-top: 50px;">
+          <div style="width: 100%;">
+            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+              <div style="display: block; width: 100%; text-align: center;"> Local Team</div>
+              <div style="display: block; text-align: center;"></div>
+            </div>
+            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
+            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+              <div style="display: block; width: 100%; padding: 1px; text-align: center;"> Visit Team</div>
+              <div style=" display: block; text-align: center;"> </div>
+            </div>
+            <hr width="100%" size="2" align="center">
           </div>
-          <div style="display: block; width: 100%; text-align: center;"> {{match.local.name}}</div>
-          <div style="display: block; text-align: center;"> {{match.localGoal}}</div>
-        </div>
-        <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
-        <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-          <div style="width: 100%; text-align: center;">
-            <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 45px; height: 45px;">
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let match of championship.matches" style="padding-top: 50px;">
+          <div style="width: 100%;">
+            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+              <div style="width: 100%; text-align: center;">
+                <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 45px; height: 45px;">
+              </div>
+              <div style="display: block; width: 100%; text-align: center;"> {{match.local.name}}</div>
+              <div style="display: block; text-align: center;"> {{match.localGoal}}</div>
+            </div>
+            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
+            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
+              <div style="width: 100%; text-align: center;">
+                <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 45px; height: 45px;">
+              </div>
+              <div style="display: block; width: 100%; padding: 1px; text-align: center;"> {{match.visit.name}}</div>
+              <div style=" display: block; text-align: center;"> {{match.visitGoal}}</div>
+            </div>
+            <hr width="100%" size="2" align="center">
           </div>
-          <div style="display: block; width: 100%; padding: 1px; text-align: center;"> {{match.visit.name}}</div>
-          <div style=" display: block; text-align: center;"> {{match.visitGoal}}</div>
-        </div>
-      <hr width="100%" size="2" align="center">
-      </div>
-    </mat-list-item>
-  </mat-list>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+  </mat-tab-group>
 </div>
