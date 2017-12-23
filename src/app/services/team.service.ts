@@ -1,6 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import {
+	Observable,
+	Subject
+} from 'rxjs/Rx';
 import { of } from 'rxjs/observable/of';
+import {
+	Http,
+	Headers,
+	RequestOptions,
+	Response
+} from '@angular/http'
+import 'rxjs/add/operator/map';
+import 'rxjs/Rx'; //get everything from Rx    
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TeamService {
@@ -38,7 +50,12 @@ export class TeamService {
 		this.chelsea,
 		this.psg
 	];
-	constructor() { }
+	private jsonFileURL: string = "../assets/teams.json";
+
+
+	constructor(private http: Http) {
+
+	}
 
 	list(): any[] {
 		return this.teams;
@@ -54,5 +71,16 @@ export class TeamService {
 
 	getTeamById(id: any): Observable<any> {
 		return of(this.teams[id - 1]);
+	}
+
+	getTeamsFromJson(): Observable<any> {
+		return this.http.get(this.jsonFileURL).map((response: Response) => {
+			return <any>response.json()
+		}).catch(this.handleError);
+	}
+
+	private handleError(errorResponse: Response) {
+		console.log(errorResponse.statusText);
+		return Observable.throw(errorResponse.json().error || "Server error");
 	}
 }

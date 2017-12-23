@@ -64,11 +64,13 @@ import { ChampionshipService } from './services/championship.service';
 import { TeamService } from './services/team.service';
 import { PlayerService } from './services/player.service';
 
+
 export class AllMaterialModule { }
 
 const appRoutes: Routes = [
 	{ path: 'championships/:id', component: ChampionshipInfoComponent },
 	{ path: 'teams/:id', component: TeamInfoComponent },
+	{ path: 'teams', component: TeamListComponent },
 	{ path: 'players/:id', component: PlayerInfoComponent },
 	{ path: '**', component: ChampionshipInfoComponent }
 ];
@@ -82,6 +84,7 @@ const appRoutes: Routes = [
 		BrowserModule,
 		BrowserAnimationsModule,
 		FormsModule,
+		HttpModule,
 		RouterModule.forRoot(
 			appRoutes,
 			{ enableTracing: true } // <-- debugging purposes only

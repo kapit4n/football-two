@@ -1,0 +1,29 @@
+{
+	"teams": [
+		{
+			"id": 1,
+			"name": "Barcelona",
+			"img": "http://static.tumblr.com/6128b90a182ae6c0bc37190cbc700ad0/muykxvc/fo8nad02f/tumblr_static_7g0xraagoo84sogssw0swssg4.jpg",
+			"icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/FC-Barcelona-icon.png"
+		},
+		{
+			"id": 2,
+			"name": "Real Madrid",
+			"img": "http://www.dawsontravel.ie/assets/userfiles/slide%20Real%202.jpg",
+			"icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/Real-Madrid-icon.png"
+		},
+		{
+			"id": 3,
+			"name": "Chelsea",
+			"img": "http://www.f-covers.com/cover/chelsea-fc-facebook-cover-timeline-banner-for-fb.jpg",
+			"icon": "http://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Chelsea-FC-icon.png"
+		},
+		{
+			"id": 4,
+			"name": "PSG",
+			"img": "https://www.nvsoccer.com/media/catalog/category/PSG_BANNER.png",
+			"icon": "http://www.futbol24.com/upload/team/France/Paris-St-Germain.png"
+		}
+
+	]
+}
