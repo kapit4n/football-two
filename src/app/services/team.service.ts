@@ -61,19 +61,17 @@ export class TeamService {
 		return this.teams;
 	}
 
-	getTeams(): Observable<any[]> {
-		return of(this.teams);
-	}
-
 	teamsByChampionship(championship: any): any[] {
 		return this.teams;
 	}
 
 	getTeamById(id: any): Observable<any> {
-		return of(this.teams[id - 1]);
+		return this.http.get(this.jsonFileURL).map((response: Response) => {
+			return <any>response.json().teams[id - 1]
+		}).catch(this.handleError);
 	}
 
-	getTeamsFromJson(): Observable<any> {
+	getTeams(): Observable<any> {
 		return this.http.get(this.jsonFileURL).map((response: Response) => {
 			return <any>response.json()
 		}).catch(this.handleError);

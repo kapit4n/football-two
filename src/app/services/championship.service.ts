@@ -14,8 +14,7 @@ export class ChampionshipService {
 		{ local: "Real Madrid", visit: "Psg", localGoal: 0, visitGoal: 0, matchDate: new Date() }
 	];
 
-	championships: any[] = [
-	];
+	championships: any[];
 
 	constructor(private teamService: TeamService) {
 		var matchesChampionsLeague: any[] = [

@@ -15,10 +15,8 @@ export class TeamListComponent implements OnInit {
 	errorMessage: string;
 
 	ngOnInit() {
-		this.teamService.getTeamsFromJson().subscribe(response => {
+		this.teamService.getTeams().subscribe(response => {
 			this.teams = response.teams;
-			console.log("TEAMS");
-			console.log(this.teams);
 		},
 			error => this.errorMessage = <any>error);
 	}

@@ -13,7 +13,7 @@ export class AppComponent {
 	title = 'app';
 	events = [];
 	opened: boolean;
-	championships: any[];
+	championships: any[] = [];
 	teams: any[];
 	players: any[];
 	matches: any[];

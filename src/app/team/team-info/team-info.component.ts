@@ -8,7 +8,7 @@ import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/
 	styleUrls: ['./team-info.component.css']
 })
 export class TeamInfoComponent implements OnInit {
-	team: any;
+	team: any = {};
 	id: number;
 	private sub: any;
 
@@ -29,7 +29,10 @@ export class TeamInfoComponent implements OnInit {
 
 	getTeam(id: any): void {
 		this.teamService.getTeamById(id)
-			.subscribe(team => this.team = team);
+			.subscribe(team => {
+				this.team = team;
+				console.log(this.team);
+			});
 	}
 
 	ngOnDestroy() {
