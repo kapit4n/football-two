@@ -18,14 +18,5 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-  <mat-list *ngIf="player">
-    <mat-list-item *ngFor="let news of player.newsletters">
-      <img matListAvatar src="{{news.img}}" alt="...">
-      <h3 matLine> <span> {{news.title}} </span> </h3>
-      <p matLine>
-        <span>{{news.date | date: 'dd/MM/yyyy'}} </span>
-        <span>{{news.description}} </span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+  <app-newsletters [newsletters]="player?.newsletters"></app-newsletters>
 </div>

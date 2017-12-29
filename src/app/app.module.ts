@@ -63,6 +63,7 @@ import { FixtureInfoComponent } from './fixture/fixture-info/fixture-info.compon
 import { ChampionshipService } from './services/championship.service';
 import { TeamService } from './services/team.service';
 import { PlayerService } from './services/player.service';
+import { NewslettersComponent } from './common/newsletters/newsletters.component';
 
 
 export class AllMaterialModule { }
@@ -78,7 +79,7 @@ const appRoutes: Routes = [
 
 @NgModule({
 	declarations: [
-		AppComponent, ChampionshipListComponent, ChampionshipInfoComponent, ChampionshipEditComponent, ChampionshipNewComponent, TeamNewComponent, TeamInfoComponent, TeamEditComponent, TeamListComponent, PlayerListComponent, PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, FixtureListComponent, FixtureEditComponent, FixtureInfoComponent
+		AppComponent, ChampionshipListComponent, ChampionshipInfoComponent, ChampionshipEditComponent, ChampionshipNewComponent, TeamNewComponent, TeamInfoComponent, TeamEditComponent, TeamListComponent, PlayerListComponent, PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, FixtureListComponent, FixtureEditComponent, FixtureInfoComponent, NewslettersComponent
 	],
 	imports: [
 		BrowserModule,
