@@ -20,16 +20,20 @@ export class ChampionshipInfoComponent implements OnInit {
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
 			this.id = +params['id'];
-			if (this.id > 0)
+			if (this.id > 0) {
 				this.getChampionship(this.id);
-			else
+			}
+			else {
 				this.getChampionship(1);
+			}
 		});
 	}
 
 	getChampionship(id: any): void {
 		this.championshipService.getChampionshipById(id)
-			.subscribe(championship => this.championship = championship);
+			.subscribe(championship => {
+				this.championship = championship;
+			});
 	}
 
 	ngOnDestroy() {

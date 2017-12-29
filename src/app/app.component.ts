@@ -30,17 +30,26 @@ export class AppComponent {
 
 	getChampionships(): void {
 		this.championshipService.getChampionships()
-			.subscribe(championship => this.championships = championship);
+			.subscribe(championship => {
+				this.championships = championship;
+				console.log(this.championships);
+			});
 	}
 
 	getTeams(): void {
 		this.teamService.getTeams()
-			.subscribe(team => this.teams = team);
+			.subscribe(team => {
+				this.teams = team;
+				console.log(this.teams);
+			});
 	}
 
 	getPlayers(): void {
 		this.playerService.getPlayers()
-			.subscribe(player => this.players = player);
+			.subscribe(player => {
+				this.players = player;
+				console.log(this.players);
+			});
 	}
 
 }

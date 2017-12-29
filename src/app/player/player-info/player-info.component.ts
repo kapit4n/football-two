@@ -14,16 +14,17 @@ export class PlayerInfoComponent implements OnInit {
 
 	constructor(private playerService: PlayerService, private router: Router, private route: ActivatedRoute) {
 		const snapshot: RouterStateSnapshot = router.routerState.snapshot;
-		console.log(snapshot);
 	}
 
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
 			this.id = +params['id'];
-			if (this.id > 0)
+			if (this.id > 0) {
 				this.getPlayer(this.id);
-			else
+			}
+			else {
 				this.getPlayer(1);
+			}
 		});
 	}
 

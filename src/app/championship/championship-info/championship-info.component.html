@@ -1,5 +1,5 @@
 <div>
-  <mat-card class="example-card">
+  <mat-card class="example-card"  *ngIf="championship">
     <div style=" height: 150px; overflow: hidden;">
       <img mat-card-image src="{{championship.banner}}" class="" alt="Alt">
     </div>
@@ -21,7 +21,7 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
-      <mat-list>
+      <mat-list *ngIf="championship">
         <h3 matSubheader>Teams</h3>
         <mat-list-item>
           <mat-icon matListIcon><img matListAvatar src="" alt="..." style="width: 40px;"></mat-icon>
@@ -50,7 +50,7 @@
       </mat-list>
     </mat-tab>
     <mat-tab label="Matches">
-      <mat-list>
+      <mat-list *ngIf="championship">
         <mat-list-item style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">

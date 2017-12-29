@@ -8,13 +8,12 @@ import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/
 	styleUrls: ['./team-info.component.css']
 })
 export class TeamInfoComponent implements OnInit {
-	team: any = {};
+	team: any;
 	id: number;
 	private sub: any;
 
 	constructor(private teamService: TeamService, private router: Router, private route: ActivatedRoute) {
 		const snapshot: RouterStateSnapshot = router.routerState.snapshot;
-		console.log(snapshot);
 	}
 
 	ngOnInit() {
