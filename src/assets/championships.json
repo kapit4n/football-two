@@ -69,6 +69,29 @@
     "description": "After a magnificent year, Lionel Messi put the icing on the cake with a superb display at the Estadio Santiago Bernabeu to give his side victory in Saturday's Clasico.The Argentine has a special motivation when he plays against Real Madrid, and even more so when its on the turf of the Bernabeu.In fact, he has won more Clasicos in Madrid than he has at the Camp Nou.",
     "date": "12/12/12",
     "img": "http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/12/24/15141207556649.jpg"
+  }],
+  "standings": [
+  {
+    "team":
+    {
+      "id": 1,
+      "name": "Barcelona",
+      "img": "http://static.tumblr.com/6128b90a182ae6c0bc37190cbc700ad0/muykxvc/fo8nad02f/tumblr_static_7g0xraagoo84sogssw0swssg4.jpg",
+      "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/FC-Barcelona-icon.png",
+      "players": []
+    },
+    "points": 10
+  },
+  {
+    "team":
+    {
+      "id": 2,
+      "name": "Real Madrid",
+      "img": "http://www.dawsontravel.ie/assets/userfiles/slide%20Real%202.jpg",
+      "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/Real-Madrid-icon.png",
+      "players": []
+    },
+    "points": 8
   }]
 },
 {

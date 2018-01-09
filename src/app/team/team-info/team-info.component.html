@@ -18,15 +18,20 @@
       <button mat-button>SHARE</button>
     </mat-card-actions>
   </mat-card>
-  <div *ngIf="team">
-    <mat-list>
-      <mat-list-item *ngFor="let player of team.players">
-        <img matListAvatar src="{{player.icon}}" alt="...">
-        <h3 matLine> <span> {{player.name}} {{player.goals}}</span> </h3>
-        <p matLine>
-          <span class="demo-2">{{player.birthDate | date: 'dd/MM/yyyy'}} </span>
-        </p>
-      </mat-list-item>
-    </mat-list>
-  </div>
+  <mat-tab-group>
+    <mat-tab label="Players">
+      <mat-list>
+        <mat-list-item *ngFor="let player of team?.players">
+          <img matListAvatar src="{{player.icon}}" alt="...">
+          <h3 matLine> <span> {{player.name}} {{player.goals}}</span> </h3>
+          <p matLine>
+            <span class="demo-2">{{player.birthDate | date: 'dd/MM/yyyy'}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </mat-tab>
+    <mat-tab label="Newsletters">
+      <app-newsletters [newsletters]="team?.newsletters"></app-newsletters>
+    </mat-tab>
+  </mat-tab-group>
 </div>

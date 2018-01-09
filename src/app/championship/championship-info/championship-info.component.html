@@ -1,17 +1,17 @@
 <div>
-  <mat-card class="example-card"  *ngIf="championship">
-    <div style=" height: 150px; overflow: hidden;">
-      <img mat-card-image src="{{championship.banner}}" class="" alt="Alt">
+  <mat-card class="example-card">
+    <div style="height: 150px; overflow: hidden;">
+      <img mat-card-image src="{{championship?.banner}}" class="" alt="Alt">
     </div>
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>
-        <h1>{{championship.name}}</h1>
+        <h1>{{championship?.name}}</h1>
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>
-        {{championship.description}}
+        {{championship?.description}}
       </p>
     </mat-card-content>
     <mat-card-actions>
@@ -21,7 +21,7 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
-      <mat-list *ngIf="championship">
+      <mat-list>
         <h3 matSubheader>Teams</h3>
         <mat-list-item>
           <mat-icon matListIcon><img matListAvatar src="" alt="..." style="width: 40px;"></mat-icon>
@@ -39,18 +39,18 @@
           </p>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let match of championship.matches">
-          <mat-icon matListIcon><img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 40px;"></mat-icon>
-          <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{match.local.name}}</h4>
+        <mat-list-item *ngFor="let standing of championship?.standings">
+          <mat-icon matListIcon><img matListAvatar src="{{standing.team.icon}}" alt="..." style="width: 40px;"></mat-icon>
+          <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{standing.team.name}}</h4>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 10 </p>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 2 </p>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 3 </p>
+          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{standing.points}} </p>
           <mat-divider></mat-divider>
         </mat-list-item>
       </mat-list>
     </mat-tab>
     <mat-tab label="Matches">
-      <mat-list *ngIf="championship">
+      <mat-list>
         <mat-list-item style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
@@ -66,7 +66,7 @@
           </div>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let match of championship.matches" style="padding-top: 50px;">
+        <mat-list-item *ngFor="let match of championship?.matches" style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
               <div style="width: 100%; text-align: center;">
@@ -87,6 +87,9 @@
           </div>
         </mat-list-item>
       </mat-list>
+    </mat-tab>
+    <mat-tab label="Newsletters">
+      <app-newsletters [newsletters]="championship?.newsletters"></app-newsletters>
     </mat-tab>
   </mat-tab-group>
 </div>
