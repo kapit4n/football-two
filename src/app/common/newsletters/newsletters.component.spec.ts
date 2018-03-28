@@ -22,4 +22,11 @@ describe('NewslettersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should show the newsletters related to parent', () => {
+    // Get newletters by parent id
+    // Verify that the newsletters are listed on the page
+    expect(component).toBeTruthy();
+  });
+
 });
