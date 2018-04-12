@@ -3,8 +3,8 @@
   "id": 1,
   "name": "Champions league",
   "description": "Championship description",
-  "img": "/champions_league_banner.jpg",
-  "banner": "./champions_league_banner.jpg",
+  "img": "assets/champions_league_banner.jpg",
+  "banner": "assets/champions_league_banner.jpg",
     "matches": [
   {
     "local":
