@@ -2,7 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
-## [Run it](https://stackblitz.com/github/kapit4n/football-two)
+## [Run it](https://zzmiozbj.github.stackblitz.io)
+## [Stackblitz](https://stackblitz.com/github/kapit4n/football-two)
 
 ![Championships](https://github.com/kapit4n/football-two/raw/master/mockups/football-two-championship.png)
 
