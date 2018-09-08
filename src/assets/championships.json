@@ -51,23 +51,23 @@
         "biography": "Cristiano Ronaldo dos Santos Aveiro GOIH, ComM (Portuguese pronunciation: [kɾiʃ'tjɐnu ʁoˈnaldu]; born 5 February 1985) is a Portuguese professional footballer who plays as a forward for Spanish club Real Madrid and the Portugal national team. Often considered the best player in the world and widely regarded as one of the greatest of all time,[note 1] Ronaldo has five Ballon d'Or awards,[note 2] the most for a European player and is tied for most all-time. He is the first player in history to win four European Golden Shoes. He has won 25 trophies in his career, including five league titles, four UEFA Champions League titles and one UEFA European Championship. A prolific goalscorer, Ronaldo holds the records for most official goals scored in the top five European leagues (373), the UEFA Champions League (114), the UEFA European Championship (29) and the FIFA Club World Cup (7), as well as the most goals scored in a UEFA Champions League season (17). He has scored more than 600 senior career goals for club and country. "
       }]
     },
-    "localGoal": 0,
-    "visitGoal": 0,
-    "matchDate": "12/12/12"
+    "localGoal": 1,
+    "visitGoal": 5,
+    "matchDate": "12/01/2018"
   }],
   "newsletters": [
   {
     "id": 1,
     "title": "Messi, with 80 million euros, tops the Forbes list of best-paid Latinos",
     "description": "Of the ten best-paid Latinos in the entertainment industry in 2017, Argentinian Lionel Messi, Barcelona's star player, tops the list. Messi had earned 80 million dollars until last June, making him the highest paid footballer in the world.",
-    "date": "12/12/12",
+    "date": "12/01/2018",
     "img": "http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/12/28/15144398998516.jpg"
   },
   {
     "id": 1,
     "title": "Messi: Real Madrid's bogeyman",
     "description": "After a magnificent year, Lionel Messi put the icing on the cake with a superb display at the Estadio Santiago Bernabeu to give his side victory in Saturday's Clasico.The Argentine has a special motivation when he plays against Real Madrid, and even more so when its on the turf of the Bernabeu.In fact, he has won more Clasicos in Madrid than he has at the Camp Nou.",
-    "date": "12/12/12",
+    "date": "12/01/2018",
     "img": "http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/12/24/15141207556649.jpg"
   }],
   "standings": [
@@ -168,7 +168,7 @@
     },
     "localGoal": 0,
     "visitGoal": 0,
-    "matchDate": "12/12/12"
+    "matchDate": "12/12/201818"
   },
     {
       "visit": {
@@ -217,7 +217,7 @@
       },
       "localGoal": 0,
       "visitGoal": 0,
-      "matchDate": "12/12/12"
+      "matchDate": "12/12/2018"
     }
 
 ],
