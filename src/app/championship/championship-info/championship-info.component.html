@@ -22,9 +22,7 @@
   <mat-tab-group>
     <mat-tab label="Standings">
       <mat-list>
-        <h3 matSubheader>Teams</h3>
         <mat-list-item>
-          <mat-icon matListIcon><img matListAvatar src="" alt="..." style="width: 40px;"></mat-icon>
           <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
             Name
           </h4>
@@ -54,12 +52,12 @@
         <mat-list-item style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="display: block; width: 100%; text-align: center;"> Local Team</div>
+              <div style="display: block; width: 100%; text-align: center;"></div>
               <div style="display: block; text-align: center;"></div>
             </div>
-            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
+            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;"></div>
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="display: block; width: 100%; padding: 1px; text-align: center;"> Visit Team</div>
+              <div style="display: block; width: 100%; padding: 1px; text-align: center;"></div>
               <div style=" display: block; text-align: center;"> </div>
             </div>
             <hr width="100%" size="2" align="center">
@@ -69,19 +67,21 @@
         <mat-list-item *ngFor="let match of championship?.matches" style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="width: 100%; text-align: center;">
-                <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 45px; height: 45px;">
+              <div style="display: inline-block; width: 100px; float: right;">
+                <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
+                <div style="display: block; width: 100%;"> {{match.local.name}}</div>
               </div>
-              <div style="display: block; width: 100%; text-align: center;"> {{match.local.name}}</div>
-              <div style="display: block; text-align: center;"> {{match.localGoal}}</div>
             </div>
-            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;">VS</div>
+            <div style="width: 10%; display: inline-block; align-content: center;align-items: center; font-size: 70px;">
+                <div style="display: inline-block; font-size: 70px;"> {{match.localGoal}}</div>
+                -
+                <div style="display: inline-block; font-size: 70px;">{{match.visitGoal}}</div>
+            </div>
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="width: 100%; text-align: center;">
-                <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 45px; height: 45px;">
+              <div style="display: inline-block; width: 100px;">
+                <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
+                <div style="display: block; width: 100%;"> {{match.visit.name}}</div>
               </div>
-              <div style="display: block; width: 100%; padding: 1px; text-align: center;"> {{match.visit.name}}</div>
-              <div style=" display: block; text-align: center;"> {{match.visitGoal}}</div>
             </div>
             <hr width="100%" size="2" align="center">
           </div>
