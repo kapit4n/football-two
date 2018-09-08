@@ -8,14 +8,21 @@ import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/
 	styleUrls: ['./team-info.component.css']
 })
 export class TeamInfoComponent implements OnInit {
-	team: any;
+	/** Current team*/
+  team: any;
+  /** Curernt team id*/
 	id: number;
+  /** subscription reference */
 	private sub: any;
 
+  /** 
+   * Team Info component constructor
+   */
 	constructor(private teamService: TeamService, private router: Router, private route: ActivatedRoute) {
 		const snapshot: RouterStateSnapshot = router.routerState.snapshot;
 	}
 
+  /** Load initial data */
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
 			this.id = +params['id'];
@@ -26,6 +33,9 @@ export class TeamInfoComponent implements OnInit {
 		});
 	}
 
+  /** 
+   * Get team from TeamService by id
+   */
 	getTeam(id: any): void {
 		this.teamService.getTeamById(id)
 			.subscribe(team => {
@@ -34,6 +44,9 @@ export class TeamInfoComponent implements OnInit {
 			});
 	}
 
+  /**
+   * Unsubscribe from observable
+   */
 	ngOnDestroy() {
 		this.sub.unsubscribe();
 	}

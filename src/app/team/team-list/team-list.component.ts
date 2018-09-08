@@ -8,17 +8,19 @@ import { TeamService } from '../../services/team.service'
 })
 export class TeamListComponent implements OnInit {
 
+  /** Teams array */
+	teams: any;
+  /** Error message info */
+	errorMessage: string;
+
 	constructor(private teamService: TeamService) {
 	}
 
-	teams: any;
-	errorMessage: string;
-
+  /** Load the team list from service */
 	ngOnInit() {
 		this.teamService.getTeams().subscribe(response => {
 			this.teams = response.teams;
 		},
-			error => this.errorMessage = <any>error);
+		error => this.errorMessage = <any>error);
 	}
-
 }

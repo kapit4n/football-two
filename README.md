@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
+## [Run it](https://stackblitz.com/github/kapit4n/football-two)
+
+![Championships](https://github.com/kapit4n/football-two/raw/master/mockups/football-two-championship.png)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

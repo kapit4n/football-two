@@ -3,22 +3,22 @@
   "id": 1,
   "name": "Champions league",
   "description": "Championship description",
-  "img": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1067px-UEFA_Champions_League_logo_2.svg.png",
-  "banner": "http://www.fm-base.co.uk/forum/attachments/football-manager-2015-manager-stories/827338d1429828443-we-liverpool-expectations-so-high-championsleaguebanner800_en.jpg",
-  "matches": [
+  "img": "assets/champions_league_banner.jpg",
+  "banner": "assets/champions_league_banner.jpg",
+    "matches": [
   {
     "local":
     {
       "id": 1,
       "name": "Barcelona",
-      "img": "http://static.tumblr.com/6128b90a182ae6c0bc37190cbc700ad0/muykxvc/fo8nad02f/tumblr_static_7g0xraagoo84sogssw0swssg4.jpg",
-      "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/FC-Barcelona-icon.png",
+      "img": "assets/barcelona_banner.jpg",
+      "icon": "assets/barcelona_icon.png",
       "players": [
       {
         "id": 1,
         "name": "Messi",
-        "icon": "https://pbs.twimg.com/profile_images/3577703021/498a60681bea3b182f9ac73b8070b3ce.jpeg",
-        "img": "https://images.performgroup.com/di/library/GOAL/d0/ef/lionel-messi-alaves-barcelona-laliga-26082017_16xo7b0uco5qf1q7jwbto2606o.jpg",
+        "icon": "assets/messi_icon.jpeg",
+        "img": "assets/messi_icon.jpeg",
         "biography": "Lionel Messi was born, 24 June 1987, in Rosario, Argentina to a working-class family. His father was a factory steel worker, and his mother a cleaner. He began playing from an early age, and his talent was soon apparent. However, at the age of 11, Messi was diagnosed with growth hormone deficiency (GHD). "
       },
       {
@@ -33,8 +33,8 @@
     {
       "id": 2,
       "name": "Real Madrid",
-      "img": "http://www.dawsontravel.ie/assets/userfiles/slide%20Real%202.jpg",
-      "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/Real-Madrid-icon.png",
+      "img": "assets/real_madrid_banner.jpg",
+      "icon": "assets/real_madrid_icon.png",
       "players": [
       {
         "id": 1,

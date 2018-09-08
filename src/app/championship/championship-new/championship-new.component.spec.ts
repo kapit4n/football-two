@@ -22,4 +22,13 @@ describe('ChampionshipNewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('show save a new championship', () => {
+    // Query the fields to fill
+    // Fill data with valid data
+    // Click on save button to save the championship
+    // Verify that the data have been saved
+    expect(component).toBeTruthy();
+  });
+
 });
