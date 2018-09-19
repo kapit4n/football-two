@@ -37,7 +37,7 @@
           </p>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let standing of championship?.standings">
+        <mat-list-item *ngFor="let standing of standings">
           <mat-icon matListIcon><img matListAvatar src="{{standing.team.icon}}" alt="..." style="width: 40px;"></mat-icon>
           <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{standing.team.name}}</h4>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 10 </p>
@@ -64,7 +64,7 @@
           </div>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let match of championship?.matches" style="padding: 50px;">
+        <mat-list-item *ngFor="let match of matches" style="padding: 50px;">
           <div style="width: 100%; padding: 10px;">
             <div style="display: inline-block; width: 40%; align-content: center;align-items: center;">
               <div style="width: 100px; float: right;">

@@ -1,0 +1,37 @@
+[
+    {
+        "local": {
+            "id": 1,
+            "name": "Barcelona",
+            "img": "assets/barcelona_banner.jpg",
+            "icon": "assets/barcelona_icon.png"
+        },
+        "visit": {
+            "id": 2,
+            "name": "Real Madrid",
+            "img": "assets/real_madrid_banner.jpg",
+            "icon": "assets/real_madrid_icon.png"
+        },
+        "localGoal": 2,
+        "visitGoal": 0,
+        "matchDate": "12/01/2018"
+    },
+    {
+        "visit": {
+            "id": 1,
+            "name": "Barcelona",
+            "img": "assets/barcelona_banner.jpg",
+            "icon": "assets/barcelona_icon.png"
+        },
+        "local": {
+            "id": 2,
+            "name": "Real Madrid",
+            "img": "assets/real_madrid_banner.jpg",
+            "icon": "assets/real_madrid_icon.png"
+        },
+        "localGoal": 3,
+        "visitGoal": 2,
+        "matchDate": "12/10/2018"
+    }
+
+]

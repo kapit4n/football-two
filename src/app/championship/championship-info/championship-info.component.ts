@@ -9,6 +9,8 @@ import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/
 })
 export class ChampionshipInfoComponent implements OnInit {
 	championship: any;
+	standings: any[];
+	matches: any[];
 	id: number;
 	private sub: any;
 
@@ -22,9 +24,13 @@ export class ChampionshipInfoComponent implements OnInit {
 			this.id = +params['id'];
 			if (this.id > 0) {
 				this.getChampionship(this.id);
+				this.getMatches(this.id);
+				this.getStandings(this.id);
 			}
 			else {
 				this.getChampionship(1);
+				this.getMatches(1);
+				this.getStandings(1);
 			}
 		});
 	}
@@ -33,6 +39,20 @@ export class ChampionshipInfoComponent implements OnInit {
 		this.championshipService.getChampionshipById(id)
 			.subscribe(championship => {
 				this.championship = championship;
+			});
+	}
+	
+	getStandings(id: any): void {
+		this.championshipService.getStandingsById(id)
+			.subscribe(standings => {
+				this.standings = standings;
+			});
+	}
+
+	getMatches(id: any): void {
+		this.championshipService.getMatchesById(id)
+			.subscribe(matches => {
+				this.matches = matches;
 			});
 	}
 
