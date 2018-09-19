@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## [Run it](https://stackblitz.com/github/kapit4n/football-two)
 
-![Championships](https://github.com/kapit4n/football-two/raw/master/mockups/football-two-championship.png)
+![Championships](https://github.com/kapit4n/football-two/raw/master/mockups/football_two_championship_info_matches.png)
 
 ## Development server
 
