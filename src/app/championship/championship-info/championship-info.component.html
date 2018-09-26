@@ -21,31 +21,34 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
+      <div *ngFor="let standingGroup of standings">
+      <h1>Group: {{standingGroup.group}}</h1>
       <mat-list>
         <mat-list-item>
           <h4 style="display: inline-block; width: 135px; padding: 50px; position: relative; top: 9px;">
-            Name
+            Club
           </h4>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
             MP
           </p>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
-            GF
+            GD
           </p>
           <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
             Pts
           </p>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let standing of standings">
-          <mat-icon matListIcon><img matListAvatar src="{{standing.team.icon}}" alt="..." style="width: 40px;"></mat-icon>
-          <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{standing.team.name}}</h4>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 10 </p>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> 2 </p>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{standing.points}} </p>
-          <mat-divider></mat-divider>
-        </mat-list-item>
-      </mat-list>
+          <mat-list-item *ngFor="let team of standingGroup.teams">
+            <mat-icon matListIcon><img matListAvatar src="{{team.team.icon}}" alt="..." style="width: 40px;"></mat-icon>
+            <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{team.team.name}}</h4>
+            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.MP}} </p>
+            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.GD}} </p>
+            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.points}} </p>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-tab>
     <mat-tab label="Matches">
       <mat-list>
