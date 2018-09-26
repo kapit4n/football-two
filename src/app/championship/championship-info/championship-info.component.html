@@ -51,7 +51,13 @@
       </div>
     </mat-tab>
     <mat-tab label="Matches">
-      <mat-list>
+      
+      <div style="width: 50%; display: inline-block;" *ngFor="let match of matches">
+        {{match.local.name}} vs {{match.visit.name}}
+      </div>
+
+
+      <mat-list *ngIf="matchesPlaying">
         <mat-list-item style="padding-top: 50px;">
           <div style="width: 100%;">
             <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
@@ -67,7 +73,7 @@
           </div>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let match of matches" style="padding: 50px;">
+        <mat-list-item *ngFor="let match of matchesPlaying" style="padding: 50px;">
           <div style="width: 100%; padding: 10px;">
             <div style="display: inline-block; width: 40%; align-content: center;align-items: center;">
               <div style="width: 100px; float: right;">
@@ -91,6 +97,9 @@
           </div>
         </mat-list-item>
       </mat-list>
+
+
+
     </mat-tab>
     <mat-tab label="Newsletters">
       <app-newsletters [newsletters]="championship?.newsletters"></app-newsletters>
