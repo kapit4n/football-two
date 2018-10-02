@@ -1,5 +1,58 @@
 [
   {
+    "group": "A",
+    "teams": [
+      {
+        "team": {
+          "id": 1,
+          "name": "Atletico Madrid",
+          "img": "http://www.timelinecoverbanner.com/facebook-covers/2012/01/atletico-madrid.jpg",
+          "icon": "http://aux.iconspalace.com/uploads/atletico-madrid-logo-icon-256.png",
+          "players": []
+        },
+        "points": 3,
+        "MP": 1,
+        "GD": 1
+      },
+      {
+        "team": {
+          "id": 4,
+          "name": "Dortmund",
+          "img": "http://icons.iconarchive.com/icons/giannis-zographos/german-football-club/256/Borussia-Dortmund-icon.png",
+          "icon": "http://icons.iconarchive.com/icons/giannis-zographos/german-football-club/256/Borussia-Dortmund-icon.png",
+          "players": []
+        },
+        "points": 3,
+        "MP": 1,
+        "GD": 1
+      },
+      {
+        "team": {
+          "id": 2,
+          "name": "Monaco",
+          "img": "http://aux.iconspalace.com/uploads/as-monaco-logo-icon-256.png",
+          "icon": "http://aux.iconspalace.com/uploads/as-monaco-logo-icon-256.png",
+          "players": []
+        },
+        "points": 0,
+        "MP": 1,
+        "GD": -1
+      },
+      {
+        "team": {
+          "id": 3,
+          "name": "Club Brugge",
+          "img": "http://futhead.cursecdn.com/static/img/17/clubs/231.png",
+          "icon": "http://futhead.cursecdn.com/static/img/17/clubs/231.png",
+          "players": []
+        },
+        "points": 0,
+        "MP": 1,
+        "GD": -1
+      }
+    ]
+  },
+  {
     "group": "B",
     "teams": [
       {
@@ -30,8 +83,8 @@
         "team": {
           "id": 2,
           "name": "Tottenham",
-          "img": "http://www.dawsontravel.ie/assets/userfiles/slide%20Real%202.jpg",
-          "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/Real-Madrid-icon.png",
+          "img": "http://aux2.iconspalace.com/uploads/tottenham-hotspur-logo-icon-256.png",
+          "icon": "http://aux2.iconspalace.com/uploads/tottenham-hotspur-logo-icon-256.png",
           "players": []
         },
         "points": 0,
@@ -42,8 +95,8 @@
         "team": {
           "id": 3,
           "name": "PSV Eindhoven",
-          "img": "http://www.timelinecoverbanner.com/facebook-covers/2012/01/atletico-madrid.jpg",
-          "icon": "http://aux.iconspalace.com/uploads/atletico-madrid-logo-icon-256.png",
+          "img": "http://aux2.iconspalace.com/uploads/psv-eindhoven-logo-icon-256.png",
+          "icon": "http://aux2.iconspalace.com/uploads/psv-eindhoven-logo-icon-256.png",
           "players": []
         },
         "points": 0,
