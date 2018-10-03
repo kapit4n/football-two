@@ -52,8 +52,8 @@
     </mat-tab>
     <mat-tab label="Matches">
       
-      <div style="width: 50%; display: inline-block;" *ngFor="let match of matches">
-        {{match.local.name}} vs {{match.visit.name}}
+      <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;" *ngFor="let match of matches">
+        <app-match-vs [match]="match"></app-match-vs>
       </div>
 
 
@@ -77,7 +77,7 @@
           <div style="width: 100%; padding: 10px;">
             <div style="display: inline-block; width: 40%; align-content: center;align-items: center;">
               <div style="width: 100px; float: right;">
-                <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
+              <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
                 <div style="display: block; width: 100%;"> {{match.local.name}}</div>
               </div>
             </div>
