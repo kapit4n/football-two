@@ -24,53 +24,9 @@
       <app-standing-table [standings]="standings"></app-standing-table>
     </mat-tab>
     <mat-tab label="Matches">
-      
       <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;" *ngFor="let match of matches">
         <app-match-vs [match]="match"></app-match-vs>
       </div>
-      <mat-list *ngIf="matchesPlaying">
-        <mat-list-item style="padding-top: 50px;">
-          <div style="width: 100%;">
-            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="display: block; width: 100%; text-align: center;"></div>
-              <div style="display: block; text-align: center;"></div>
-            </div>
-            <div style="width: 10%; display: inline-block; align-content: center;align-items: center;"></div>
-            <div style="display: inline-block; width: 44%; align-content: center;align-items: center;">
-              <div style="display: block; width: 100%; padding: 1px; text-align: center;"></div>
-              <div style=" display: block; text-align: center;"> </div>
-            </div>
-            <hr width="100%" size="2" align="center">
-          </div>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let match of matchesPlaying" style="padding: 50px;">
-          <div style="width: 100%; padding: 10px;">
-            <div style="display: inline-block; width: 40%; align-content: center;align-items: center;">
-              <div style="width: 100px; float: right;">
-              <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
-                <div style="display: block; width: 100%;"> {{match.local.name}}</div>
-              </div>
-            </div>
-            <div style="width: 18%; display: inline-block; align-content: center;align-items: center; font-size: 60px;">
-                <div style="display: block; font-size: 20px; width: 100%; align-items: center; padding: 20px;">{{match.matchDate}}</div>
-                <div style="display: inline-block; font-size: 60px; padding: 15px;"> {{match.localGoal}}</div>
-                -
-                <div style="display: inline-block; font-size: 60px; padding: 15px;">{{match.visitGoal}}</div>
-            </div>
-            <div style="display: inline-block; width: 40%; align-content: center;align-items: center;">
-              <div style="display: inline-block; width: 100px;">
-                <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 70px; height: 70px; display: block;">
-                <div style="display: block; width: 100%;"> {{match.visit.name}}</div>
-              </div>
-            </div>
-            <hr width="100%" size="2" align="center">
-          </div>
-        </mat-list-item>
-      </mat-list>
-
-
-
     </mat-tab>
     <mat-tab label="Newsletters">
       <app-newsletters [newsletters]="championship?.newsletters"></app-newsletters>
