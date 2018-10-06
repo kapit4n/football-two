@@ -24,7 +24,8 @@
       <app-standing-table [standings]="standings"></app-standing-table>
     </mat-tab>
     <mat-tab label="Matches">
-      <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;" *ngFor="let match of matches">
+      <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;"
+        *ngFor="let match of matches">
         <app-match-vs [match]="match"></app-match-vs>
       </div>
     </mat-tab>
