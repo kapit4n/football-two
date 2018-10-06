@@ -21,42 +21,13 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
-      <div *ngFor="let standingGroup of standings">
-      <h1>Group: {{standingGroup.group}}</h1>
-      <mat-list>
-        <mat-list-item>
-          <h4 style="display: inline-block; width: 135px; padding: 50px; position: relative; top: 9px;">
-            Club
-          </h4>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
-            MP
-          </p>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
-            GD
-          </p>
-          <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">
-            Pts
-          </p>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-          <mat-list-item *ngFor="let team of standingGroup.teams">
-            <mat-icon matListIcon><img matListAvatar src="{{team.team.icon}}" alt="..." style="width: 40px;"></mat-icon>
-            <h4 style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;">{{team.team.name}}</h4>
-            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.MP}} </p>
-            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.GD}} </p>
-            <p style="display: inline-block; width: 100px; padding: 50px; position: relative; top: 9px;"> {{team.points}} </p>
-            <mat-divider></mat-divider>
-          </mat-list-item>
-        </mat-list>
-      </div>
+      <app-standing-table [standings]="standings"></app-standing-table>
     </mat-tab>
     <mat-tab label="Matches">
       
       <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;" *ngFor="let match of matches">
         <app-match-vs [match]="match"></app-match-vs>
       </div>
-
-
       <mat-list *ngIf="matchesPlaying">
         <mat-list-item style="padding-top: 50px;">
           <div style="width: 100%;">

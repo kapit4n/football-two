@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-standing-table',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class StandingTableComponent implements OnInit {
 
   constructor() { }
+  @Input()
+  standings: any[];
 
   ngOnInit() {
   }
