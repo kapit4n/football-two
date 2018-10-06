@@ -20,52 +20,71 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TeamService {
-
   /** Team list */
   teams: any[];
-  
+
   /** json URL */
-	private jsonFileURL: string = "../assets/teams.json";
+  private jsonFileURL: string = "../assets/teams.json";
+
+  /** json URL */
+  private jsonPlayersURL: string = "../assets/teams_@id_players.json";
 
   /** Team service constructor */
-	constructor(private http: Http) {
-	}
+  constructor(private http: Http) {}
 
-  /** 
+  /**
    * Returns the list of teams
    */
-	list(): any[] {
-		return this.teams;
-	}
+  list(): any[] {
+    return this.teams;
+  }
 
   /**
    * Return team by championship
    */
-	teamsByChampionship(championship: any): any[] {
-		return this.teams;
-	}
+  teamsByChampionship(championship: any): any[] {
+    return this.teams;
+  }
 
   /**
    * Return an observable with the yeam that matches the id
    */
-	getTeamById(id: any): Observable<any> {
-		return this.http.get(this.jsonFileURL).map((response: Response) => {
-			return <any>response.json()[id - 1]
-		}).catch(this.handleError);
-	}
+  getTeamById(id: any): Observable<any> {
+    return this.http
+      .get(this.jsonFileURL)
+      .map((response: Response) => {
+        return <any>response.json()[id - 1];
+      })
+      .catch(this.handleError);
+  }
+
+  /**
+   * Gets players by Team Id
+   */
+  getPlayersById(id: any): Observable<any[]> {
+    return this.http
+      .get(this.jsonPlayersURL.replace("@id", id))
+      .map((response: Response) => {
+        return <any[]>response.json();
+      })
+      .catch(this.handleError);
+  }
 
   /**
    * Return an observable with the list of teams
    */
-	getTeams(): Observable<any> {
-		return this.http.get(this.jsonFileURL).map((response: Response) => {
-			return <any>response.json()
-		}).catch(this.handleError);
-	}
+  getTeams(): Observable<any> {
+    return this.http
+      .get(this.jsonFileURL)
+      .map((response: Response) => {
+        return <any>response.json();
+      })
+      .catch(this.handleError);
+  }
 
   /** Handles the response error */
-	private handleError(errorResponse: Response) {
-		console.log(errorResponse.statusText);
-		return Observable.throw(errorResponse.json().error || "Server error");
-	}
+  private handleError(errorResponse: Response) {
+    console.log(errorResponse.statusText);
+    return Observable.throw(errorResponse.json().error || "Server error");
+  }
 }

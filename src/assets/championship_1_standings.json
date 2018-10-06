@@ -10,9 +10,9 @@
           "icon": "http://aux.iconspalace.com/uploads/atletico-madrid-logo-icon-256.png",
           "players": []
         },
-        "points": 3,
-        "MP": 1,
-        "GD": 1
+        "points": 6,
+        "MP": 2,
+        "GD": 3
       },
       {
         "team": {
@@ -22,9 +22,9 @@
           "icon": "http://icons.iconarchive.com/icons/giannis-zographos/german-football-club/256/Borussia-Dortmund-icon.png",
           "players": []
         },
-        "points": 3,
-        "MP": 1,
-        "GD": 1
+        "points": 6,
+        "MP": 2,
+        "GD": 4
       },
       {
         "team": {
@@ -35,8 +35,8 @@
           "players": []
         },
         "points": 0,
-        "MP": 1,
-        "GD": -1
+        "MP": 2,
+        "GD": -4
       },
       {
         "team": {
@@ -47,8 +47,8 @@
           "players": []
         },
         "points": 0,
-        "MP": 1,
-        "GD": -1
+        "MP": 2,
+        "GD": -3
       }
     ]
   },
@@ -63,9 +63,9 @@
           "icon": "http://icons.iconarchive.com/icons/giannis-zographos/spanish-football-club/256/FC-Barcelona-icon.png",
           "players": []
         },
-        "points": 3,
-        "MP": 1,
-        "GD": 4
+        "points": 6,
+        "MP": 2,
+        "GD": 6
       },
       {
         "team": {
@@ -76,8 +76,8 @@
           "players": []
         },
         "points": 3,
-        "MP": 1,
-        "GD": 1
+        "MP": 6,
+        "GD": 2
       },
       {
         "team": {
@@ -88,8 +88,8 @@
           "players": []
         },
         "points": 0,
-        "MP": 1,
-        "GD": -1
+        "MP": 2,
+        "GD": -3
       },
       {
         "team": {
@@ -100,8 +100,8 @@
           "players": []
         },
         "points": 0,
-        "MP": 1,
-        "GD": -4
+        "MP": 2,
+        "GD": -5
       }
     ]
   }

@@ -21,7 +21,7 @@
   <mat-tab-group>
     <mat-tab label="Players">
       <mat-list>
-        <mat-list-item *ngFor="let player of team?.players">
+        <mat-list-item *ngFor="let player of players">
           <img matListAvatar src="{{player.icon}}" alt="...">
           <h3 matLine> <span> {{player.name}} {{player.goals}}</span> </h3>
           <p matLine>
