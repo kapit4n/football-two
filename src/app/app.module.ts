@@ -66,6 +66,7 @@ import { PlayerService } from './services/player.service';
 import { NewslettersComponent } from './common/newsletters/newsletters.component';
 import { MatchVsComponent } from './common/match-vs/match-vs.component';
 import { StandingTableComponent } from './common/standing-table/standing-table.component';
+import { StandingSortPipe } from './common/standing-sort.pipe';
 
 
 export class AllMaterialModule { }
@@ -87,7 +88,7 @@ const appRoutes: Routes = [
 		PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, 
 		MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, 
 		FixtureListComponent, FixtureEditComponent, FixtureInfoComponent, 
-		NewslettersComponent, MatchVsComponent, StandingTableComponent
+		NewslettersComponent, MatchVsComponent, StandingTableComponent, StandingSortPipe
 	],
 	imports: [
 		BrowserModule,
