@@ -9,7 +9,7 @@ import { ParamMap, Router, ActivatedRoute, RouterStateSnapshot } from '@angular/
 })
 export class ChampionshipInfoComponent implements OnInit {
 	championship: any;
-	standings: any[];
+	standingGroups: any[];
 	matches: any[];
 	id: number;
 	private sub: any;
@@ -44,8 +44,8 @@ export class ChampionshipInfoComponent implements OnInit {
 	
 	getStandings(id: any): void {
 		this.championshipService.getStandingsById(id)
-			.subscribe(standings => {
-				this.standings = standings;
+			.subscribe(standingGroups => {
+				this.standingGroups = standingGroups;
 			});
 	}
 

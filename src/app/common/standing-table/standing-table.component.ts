@@ -9,7 +9,7 @@ export class StandingTableComponent implements OnInit {
 
   constructor() { }
   @Input()
-  standings: any[];
+  standingTeams: any[];
 
   ngOnInit() {
   }

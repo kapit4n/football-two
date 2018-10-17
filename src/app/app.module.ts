@@ -67,6 +67,7 @@ import { NewslettersComponent } from './common/newsletters/newsletters.component
 import { MatchVsComponent } from './common/match-vs/match-vs.component';
 import { StandingTableComponent } from './common/standing-table/standing-table.component';
 import { StandingSortPipe } from './common/standing-sort.pipe';
+import { StandingTableGroupsComponent } from './common/standing-table-groups/standing-table-groups.component';
 
 
 export class AllMaterialModule { }
@@ -88,7 +89,8 @@ const appRoutes: Routes = [
 		PlayerInfoComponent, PlayerEditComponent, PlayerNewComponent, MatchListComponent, 
 		MatchEditComponent, MatchInfoComponent, MatchNewComponent, FixtureNewComponent, 
 		FixtureListComponent, FixtureEditComponent, FixtureInfoComponent, 
-		NewslettersComponent, MatchVsComponent, StandingTableComponent, StandingSortPipe
+		NewslettersComponent, MatchVsComponent, StandingTableComponent, 
+		StandingSortPipe, StandingTableGroupsComponent
 	],
 	imports: [
 		BrowserModule,
