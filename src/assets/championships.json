@@ -5,6 +5,7 @@
   "description": "Championship description",
   "img": "assets/champions_league_banner.jpg",
   "banner": "assets/champions_league_banner.jpg",
+  "groups": true,
     "matches": [
   {
     "local":
@@ -120,6 +121,7 @@
   "description": "La liga is a championship from Spain",
   "img": "http://files.laliga.es/seccion_logos/laliga-h-16-9.jpg",
   "banner": "https://img.planetafobal.com/2016/07/camisetas-de-laliga-de-espana-2016-2017-ds.jpg",
+  "groups": false,
   "matches": [
   {
     "local":

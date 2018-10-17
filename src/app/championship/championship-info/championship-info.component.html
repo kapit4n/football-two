@@ -21,7 +21,8 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
-      <app-standing-table-groups [standingGroups]="standingGroups"></app-standing-table-groups>
+      <app-standing-table-groups *ngIf="championship.groups" [standingGroups]="standingGroups"></app-standing-table-groups>
+      <app-standing-table *ngIf="!championship.groups" [standingTeams]="standingGroups"></app-standing-table>
     </mat-tab>
     <mat-tab label="Matches">
       <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;"
