@@ -1,10 +1,8 @@
 # FootballTwo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
-
 ## [Run it](https://stackblitz.com/github/kapit4n/football-two)
 
-![Championships](https://github.com/kapit4n/football-two/raw/master/mockups/football_two_championship_info_matches.png)
+![Championships](https://raw.githubusercontent.com/kapit4n/football-two/develop/mockups/football-two-matches-001.png)
 
 ## Development server
 
