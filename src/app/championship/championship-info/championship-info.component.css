@@ -1,0 +1,25 @@
+.banner-ch {
+  height: 350px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .banner-ch {
+    height: 250px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-ch {
+    height: 180px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner-ch {
+    height: 140px;
+    overflow: hidden;
+  }
+}
