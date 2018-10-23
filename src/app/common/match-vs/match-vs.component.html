@@ -1,13 +1,13 @@
 <div>
-  <div style="width: 60%; display: inline-block; border-left: 6px solid red;border-right: 2px solid rgb(107, 102, 102);">
+  <div class="match-vs" style="">
     <div style="padding: 5px;">
-      <img matListAvatar src="{{match.local.icon}}" alt="..." style="width: 30px; height: 30px; display: block; display: inline-block;"> {{match.local.name}}
+      <img matListAvatar src="{{match.local.icon}}" alt="..." class="team"> {{match.local.name}}
     </div>
     <div style="padding: 5px;">
-      <img matListAvatar src="{{match.visit.icon}}" alt="..." style="width: 30px; height: 30px; display: block; display: inline-block;"> {{match.visit.name}}
+      <img matListAvatar src="{{match.visit.icon}}" alt="..." class="team"> {{match.visit.name}}
     </div>
   </div>
-  <div style="width: 30%; display: inline-block; padding: 10px;">
+  <div class="match-info">
     <div>
       {{match.matchDate}}
     </div>
