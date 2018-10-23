@@ -4,7 +4,7 @@
 }
 
 .match-vs-container {
-  width: 48%;
+  width: 49.2%;
   display: inline-block;
   border-style: solid;
   border-color: grey;
@@ -17,7 +17,7 @@
     overflow: hidden;
   }
    .match-vs-container {
-    width: 90%;
+    width: 99%;
   }
 }
 
@@ -27,7 +27,7 @@
     overflow: hidden;
   }
   .match-vs-container {
-    width: 95%;
+    width: 99%;
   }
 }
 
@@ -38,6 +38,6 @@
   }
 
   .match-vs-container {
-    width: 97%;
+    width: 99%;
   }
 }
