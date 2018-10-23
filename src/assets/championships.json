@@ -36,6 +36,7 @@
     "name": "Copa Libertadores",
     "description": "The CONMEBOL Libertadores, named as Copa Libertadores de América, is an annual international club football competition organized by CONMEBOL since 1960. It is one of the most prestigious tournaments in the world and the most prestigious club competition in South American football.",
     "img": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
-    "banner": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg"
+    "banner": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
+    "groups": false
   }
 ]
