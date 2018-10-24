@@ -1,0 +1,43 @@
+.banner-ch {
+  height: 350px;
+  overflow: hidden;
+}
+
+.match-vs-container {
+  width: 49.2%;
+  display: inline-block;
+  border-style: solid;
+  border-color: grey;
+  margin: 2px;
+  border-width: thin;
+}
+@media screen and (max-width: 900px) {
+  .banner-ch {
+    height: 250px;
+    overflow: hidden;
+  }
+   .match-vs-container {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-ch {
+    height: 180px;
+    overflow: hidden;
+  }
+  .match-vs-container {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner-ch {
+    height: 140px;
+    overflow: hidden;
+  }
+
+  .match-vs-container {
+    width: 99%;
+  }
+}

@@ -1,7 +1,7 @@
 <div>
   <mat-card class="example-card">
-    <div style="height: 150px; overflow: hidden;">
-      <img mat-card-image src="{{championship?.banner}}" class="" alt="Alt">
+    <div class="banner-ch">
+        <img mat-card-image src="{{championship?.banner}}" alt="Alt">
     </div>
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -21,14 +21,15 @@
   </mat-card>
   <mat-tab-group>
     <mat-tab label="Standings">
-      <app-standing-table-groups [standingGroups]="standingGroups"></app-standing-table-groups>
+      <app-standing-table-groups *ngIf="championship.groups" [standingGroups]="standingGroups"></app-standing-table-groups>
+      <app-standing-table *ngIf="!championship.groups" [standingTeams]="standingGroups"></app-standing-table>
     </mat-tab>
     <mat-tab label="Matches">
-      <div style="width: 48%; display: inline-block; border-style: solid;     border-color: grey;     margin: 2px; border-width: thin;"
-        *ngFor="let match of matches">
+      <div class="match-vs-container" *ngFor="let match of matches">
         <app-match-vs [match]="match"></app-match-vs>
       </div>
     </mat-tab>
+    
     <mat-tab label="Newsletters">
       <app-newsletters [newsletters]="championship?.newsletters"></app-newsletters>
     </mat-tab>

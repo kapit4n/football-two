@@ -16,7 +16,8 @@ export class ChampionshipInfoComponent implements OnInit {
 
 	constructor(private championshipService: ChampionshipService, private router: Router, private route: ActivatedRoute) {
 		const snapshot: RouterStateSnapshot = router.routerState.snapshot;
-		console.log(snapshot);
+		this.championship = {};
+		this.standingGroups = [];
 	}
 
 	ngOnInit() {

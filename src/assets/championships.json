@@ -5,6 +5,7 @@
     "description": "Championship description",
     "img": "assets/champions_league_banner.jpg",
     "banner": "assets/champions_league_banner.jpg",
+    "groups": true,
     "newsletters": [
       {
         "id": 1,
@@ -12,6 +13,13 @@
         "description": "Of the ten best-paid Latinos in the entertainment industry in 2017, Argentinian Lionel Messi, Barcelona's star player, tops the list. Messi had earned 80 million dollars until last June, making him the highest paid footballer in the world.",
         "date": "12/01/2018",
         "img": "http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/12/28/15144398998516.jpg"
+      },
+      {
+        "id": 1,
+        "title": "Messi: Real Madrid's bogeyman",
+        "description": "After a magnificent year, Lionel Messi put the icing on the cake with a superb display at the Estadio Santiago Bernabeu to give his side victory in Saturday's Clasico.The Argentine has a special motivation when he plays against Real Madrid, and even more so when its on the turf of the Bernabeu.In fact, he has won more Clasicos in Madrid than he has at the Camp Nou.",
+        "date": "12/01/2018",
+        "img": "http://e00-marca.uecdn.es/assets/multimedia/imagenes/2017/12/24/15141207556649.jpg"
       }
     ]
   },
@@ -20,13 +28,15 @@
     "name": "La Liga",
     "description": "La liga is a championship from Spain",
     "img": "http://files.laliga.es/seccion_logos/laliga-h-16-9.jpg",
-    "banner": "https://img.planetafobal.com/2016/07/camisetas-de-laliga-de-espana-2016-2017-ds.jpg"
+    "banner": "https://img.planetafobal.com/2016/07/camisetas-de-laliga-de-espana-2016-2017-ds.jpg",
+    "groups": false
   },
   {
     "id": 3,
     "name": "Copa Libertadores",
     "description": "The CONMEBOL Libertadores, named as Copa Libertadores de América, is an annual international club football competition organized by CONMEBOL since 1960. It is one of the most prestigious tournaments in the world and the most prestigious club competition in South American football.",
     "img": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
-    "banner": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg"
+    "banner": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
+    "groups": false
   }
 ]
