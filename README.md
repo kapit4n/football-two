@@ -2,7 +2,7 @@
 
 ## [Run it](https://stackblitz.com/github/kapit4n/football-two)
 
-![Championships](https://raw.githubusercontent.com/kapit4n/football-two/develop/mockups/football-two-matches-001.png)
+![Championships](https://raw.githubusercontent.com/kapit4n/football-two/develop/mockups/football-two-matches-003.png)
 
 ## Development server
 
