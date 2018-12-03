@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ConfService {
 
-  championship: any: 
+  championship: any;
   constructor() {
     this.championship = {
       displayStandings: true,
