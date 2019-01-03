@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import { MockChampionship } from '../mock/mock-championship';
-import { TeamService } from '../services/team.service'
+import { ConfService } from './conf.service';
 
 import {
-	Observable,
-	Subject
+	Observable
 } from 'rxjs/Rx';
 
 import { of } from 'rxjs/observable/of';
@@ -35,7 +33,7 @@ export class ChampionshipService {
   /**
    * Championship constructor
    */
-	constructor(private http: Http) {
+	constructor(private http: Http, private confSvc: ConfService) {
 	}
 
   /**
@@ -49,7 +47,7 @@ export class ChampionshipService {
    * Gets the list of championships
    */
 	getChampionships(): Observable<any[]> {
-		return this.http.get(this.jsonFileURL).map((response: Response) => {
+		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
 			return <any>response.json()
 		}).catch(this.handleError);
 	}
@@ -58,7 +56,7 @@ export class ChampionshipService {
    * Gets Championship by Id
    */
 	getChampionshipById(id: any): Observable<any> {
-		return this.http.get(this.jsonFileURL).map((response: Response) => {
+		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
 			return <any>response.json()[id - 1];
 		}).catch(this.handleError);
 	}

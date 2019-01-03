@@ -40,6 +40,11 @@ import {
 	MatTooltipModule,
 	MatStepperModule,
 } from '@angular/material';
+
+import { ChampionshipService } from './services/championship.service';
+import { ConfService } from './services/conf.service';
+import { TeamService } from './services/team.service';
+import { PlayerService } from './services/player.service';
 import { ChampionshipListComponent } from './championship/championship-list/championship-list.component';
 import { ChampionshipInfoComponent } from './championship/championship-info/championship-info.component';
 import { ChampionshipEditComponent } from './championship/championship-edit/championship-edit.component';
@@ -60,15 +65,11 @@ import { FixtureNewComponent } from './fixture/fixture-new/fixture-new.component
 import { FixtureListComponent } from './fixture/fixture-list/fixture-list.component';
 import { FixtureEditComponent } from './fixture/fixture-edit/fixture-edit.component';
 import { FixtureInfoComponent } from './fixture/fixture-info/fixture-info.component';
-import { ChampionshipService } from './services/championship.service';
-import { TeamService } from './services/team.service';
-import { PlayerService } from './services/player.service';
 import { NewslettersComponent } from './common/newsletters/newsletters.component';
 import { MatchVsComponent } from './common/match-vs/match-vs.component';
 import { StandingTableComponent } from './common/standing-table/standing-table.component';
 import { StandingSortPipe } from './common/standing-sort.pipe';
 import { StandingTableGroupsComponent } from './common/standing-table-groups/standing-table-groups.component';
-
 
 export class AllMaterialModule { }
 
@@ -135,7 +136,7 @@ const appRoutes: Routes = [
 		MatToolbarModule,
 		MatTooltipModule,
 	],
-	providers: [ChampionshipService, TeamService, PlayerService],
+	providers: [ChampionshipService, TeamService, PlayerService, ConfService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
