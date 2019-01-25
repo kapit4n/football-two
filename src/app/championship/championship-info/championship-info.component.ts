@@ -29,9 +29,7 @@ export class ChampionshipInfoComponent implements OnInit {
 				this.getStandings(this.id);
 			}
 			else {
-				this.getChampionship(1);
-				this.getMatches(1);
-				this.getStandings(1);
+				this.getChampionshipFirst();
 			}
 		});
 	}
@@ -40,6 +38,16 @@ export class ChampionshipInfoComponent implements OnInit {
 		this.championshipService.getChampionshipById(id)
 			.subscribe(championship => {
 				this.championship = championship;
+			});
+	}
+	
+
+	getChampionshipFirst(): void {
+		this.championshipService.getChampionshipFirst()
+			.subscribe(championship => {
+				this.championship = championship;
+				this.getMatches(this.championship.id);
+				this.getStandings(this.championship.id);
 			});
 	}
 	
