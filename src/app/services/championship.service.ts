@@ -48,7 +48,7 @@ export class ChampionshipService {
    */
 	getChampionships(): Observable<any[]> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json()
+			return <any>response.json().sort((x, y) => x.order - y.order)
 		}).catch(this.handleError);
 	}
 
@@ -57,7 +57,16 @@ export class ChampionshipService {
    */
 	getChampionshipById(id: any): Observable<any> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json()[id - 1];
+			return <any>response.json().find(x => x.id == id);
+		}).catch(this.handleError);
+	}
+	
+	/**
+   * Gets First Championship by Id
+   */
+	getChampionshipFirst(): Observable<any> {
+		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
+			return <any>response.json().sort((x, y) => y.order - x.order)[0];
 		}).catch(this.handleError);
 	}
 
