@@ -38,5 +38,13 @@
     "img": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
     "banner": "https://sportzwiki.com/wp-content/uploads/2016/07/Copa-Libertadores.jpg",
     "groups": false
+  },
+  {
+    "id": 4,
+    "name": "Copa Sudamericana",
+    "description": "The CONMEBOL Sudamericana, named as Copa Sudamericana is an annual international club football competition organized by the CONMEBOL since 2002. It is the second-most prestigious club competition in South American football. CONCACAF clubs were invited between 2004 and 2008.",
+    "img": "https://d1z84dbvyxsz7j.cloudfront.net/article/2018/06/04/p7VepKmIUXzq.jpg",
+    "banner": "https://d1z84dbvyxsz7j.cloudfront.net/article/2018/06/04/p7VepKmIUXzq.jpg",
+    "groups": false
   }
 ]
