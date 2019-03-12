@@ -7,12 +7,9 @@ import {
 
 import { of } from 'rxjs/observable/of';
 
-import {
-	Http,
-	Headers,
-	RequestOptions,
-	Response
-} from '@angular/http'
+
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+
 
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx'; //get everything from Rx    
@@ -29,7 +26,7 @@ export class PlayerService {
 	private jsonFileURL: string = "../assets/players.json";
 
   /** Player service contructor*/
-	constructor(private http: Http) { }
+	constructor(private http: HttpClient) { }
 
   /**
    * Returns the list of players on the service
@@ -67,6 +64,6 @@ export class PlayerService {
    * Handles response error
    */
 	private handleError(errorResponse: Response) {
-		return Observable.throw(errorResponse.json().error || "Server error");
+		return Observable.throw(errorResponse.json || "Server error");
 	}
 }

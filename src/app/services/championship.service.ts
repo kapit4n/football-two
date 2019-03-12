@@ -7,12 +7,7 @@ import {
 
 import { of } from 'rxjs/observable/of';
 
-import {
-	Http,
-	Headers,
-	RequestOptions,
-	Response
-} from '@angular/http'
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx'; //get everything from Rx    
@@ -33,7 +28,7 @@ export class ChampionshipService {
   /**
    * Championship constructor
    */
-	constructor(private http: Http, private confSvc: ConfService) {
+	constructor(private http: HttpClient, private confSvc: ConfService) {
 	}
 
   /**
@@ -48,7 +43,7 @@ export class ChampionshipService {
    */
 	getChampionships(): Observable<any[]> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json().sort((x, y) => x.order - y.order)
+			return <any>response.json()/*.sort((x, y) => x.order - y.order)*/
 		}).catch(this.handleError);
 	}
 
@@ -57,7 +52,7 @@ export class ChampionshipService {
    */
 	getChampionshipById(id: any): Observable<any> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json().find(x => x.id == id);
+			return <any>response.json()/*.find(x => x.id == id)*/;
 		}).catch(this.handleError);
 	}
 	
@@ -66,7 +61,7 @@ export class ChampionshipService {
    */
 	getChampionshipFirst(): Observable<any> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json().sort((x, y) => y.order - x.order)[0];
+			return <any>response.json()/*.sort((x, y) => y.order - x.order)*/[0];
 		}).catch(this.handleError);
 	}
 
@@ -75,7 +70,7 @@ export class ChampionshipService {
    */
 	getStandingsById(id: any): Observable<any[]> {
 		return this.http.get(this.jsonStandingsURL.replace("@id", id)).map((response: Response) => {
-			return <any[]>response.json();
+			return response.json;
 		}).catch(this.handleError);
 	}
 
@@ -84,7 +79,7 @@ export class ChampionshipService {
    */
 	getMatchesById(id: any): Observable<any[]> {
 		return this.http.get(this.jsonMatchesURL.replace("@id", id)).map((response: Response) => {
-			return <any[]>response.json();
+			return response.json;
 		}).catch(this.handleError);
 	}
 
@@ -94,6 +89,6 @@ export class ChampionshipService {
    * Handles the response erros
    */
 	private handleError(errorResponse: Response) {
-		return Observable.throw(errorResponse.json().error || "Server error");
+		return Observable.throw(errorResponse.json || "Server error");
 	}
 }

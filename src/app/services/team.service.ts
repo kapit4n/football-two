@@ -7,12 +7,7 @@ import {
 
 import { of } from 'rxjs/observable/of';
 
-import {
-	Http,
-	Headers,
-	RequestOptions,
-	Response
-} from '@angular/http'
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx'; //get everything from Rx    
@@ -30,7 +25,7 @@ export class TeamService {
   private jsonPlayersURL: string = "../assets/teams_@id_players.json";
 
   /** Team service constructor */
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   /**
    * Returns the list of teams
@@ -65,7 +60,7 @@ export class TeamService {
     return this.http
       .get(this.jsonPlayersURL.replace("@id", id))
       .map((response: Response) => {
-        return <any[]>response.json();
+        return response.json;
       })
       .catch(this.handleError);
   }
@@ -85,6 +80,6 @@ export class TeamService {
   /** Handles the response error */
   private handleError(errorResponse: Response) {
     console.log(errorResponse.statusText);
-    return Observable.throw(errorResponse.json().error || "Server error");
+    return Observable.throw(errorResponse.json || "Server error");
   }
 }
