@@ -1,19 +1,19 @@
-import { Injectable } from '@angular/core';
 
-import {
+import {throwError as observableThrowError, 
 	Observable,
 	Subject
-} from 'rxjs/Rx';
-
-import { of } from 'rxjs/observable/of';
+} from 'rxjs';
+import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/Rx'; //get everything from Rx    
-import 'rxjs/add/operator/toPromise';
 
-@Injectable()
+import 'rxjs/Rx'; //get everything from Rx    
+
+
+@Injectable({
+  providedIn: 'root'
+})
 export class TeamService {
   /** Team list */
   teams: any[];
@@ -80,6 +80,6 @@ export class TeamService {
   /** Handles the response error */
   private handleError(errorResponse: Response) {
     console.log(errorResponse.statusText);
-    return Observable.throw(errorResponse.json || "Server error");
+    return observableThrowError(errorResponse.json || "Server error");
   }
 }

@@ -1,19 +1,17 @@
-import { Injectable } from '@angular/core';
 
-import {
+import {throwError as observableThrowError, 
 	Observable,
 	Subject
-} from 'rxjs/Rx';
-
-import { of } from 'rxjs/observable/of';
+,  of } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 
-import 'rxjs/add/operator/map';
+
 import 'rxjs/Rx'; //get everything from Rx    
-import 'rxjs/add/operator/toPromise';
+
 
 
 @Injectable()
@@ -64,6 +62,6 @@ export class PlayerService {
    * Handles response error
    */
 	private handleError(errorResponse: Response) {
-		return Observable.throw(errorResponse.json || "Server error");
+		return observableThrowError(errorResponse.json || "Server error");
 	}
 }

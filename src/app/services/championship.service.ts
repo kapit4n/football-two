@@ -1,17 +1,15 @@
+
+import {throwError as observableThrowError, 
+	Observable
+,  of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { ConfService } from './conf.service';
 
-import {
-	Observable
-} from 'rxjs/Rx';
-
-import { of } from 'rxjs/observable/of';
-
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
-import 'rxjs/add/operator/map';
+
 import 'rxjs/Rx'; //get everything from Rx    
-import 'rxjs/add/operator/toPromise';
+
 
 
 @Injectable()
@@ -52,7 +50,8 @@ export class ChampionshipService {
    */
 	getChampionshipById(id: any): Observable<any> {
 		return this.http.get(this.confSvc.championshipsUrl()).map((response: Response) => {
-			return <any>response.json()/*.find(x => x.id == id)*/;
+			console.log(response.json())
+			return (<any>response.json()).find(x => x.id == id);
 		}).catch(this.handleError);
 	}
 	
@@ -89,6 +88,6 @@ export class ChampionshipService {
    * Handles the response erros
    */
 	private handleError(errorResponse: Response) {
-		return Observable.throw(errorResponse.json || "Server error");
+		return observableThrowError(errorResponse.json || "Server error");
 	}
 }

@@ -70,6 +70,7 @@ import { MatchVsComponent } from './common/match-vs/match-vs.component';
 import { StandingTableComponent } from './common/standing-table/standing-table.component';
 import { StandingSortPipe } from './common/standing-sort.pipe';
 import { StandingTableGroupsComponent } from './common/standing-table-groups/standing-table-groups.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 export class AllMaterialModule { }
 
@@ -135,6 +136,7 @@ const appRoutes: Routes = [
 		MatTabsModule,
 		MatToolbarModule,
 		MatTooltipModule,
+		AppRoutingModule,
 	],
 	providers: [ChampionshipService, TeamService, PlayerService, ConfService],
 	bootstrap: [AppComponent]
